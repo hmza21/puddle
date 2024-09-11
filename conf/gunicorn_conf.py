@@ -1,0 +1,4 @@
+command = '/home/ubuntu/hamzastuff/var/www/puddle.work.gd/html/venv/bin/gunicorn'
+pythonpath = '/home/ubuntu/hamzastuff/var/www/puddle.work.gd/html'
+bind = '0.0.0.0'
+workers = 3
