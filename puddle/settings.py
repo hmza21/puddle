@@ -8,7 +8,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv('DJANGO_SECRET')
 DEBUG = False
 # ALLOWED_HOSTS = ['localhost']
-ALLOWED_HOSTS = ['http://puddle.work.gd/']
+ALLOWED_HOSTS = ['130.61.117.184']
 
 LOGIN_URL = '/login/'
 LOGIN_REDIRECT_URL = '/'
