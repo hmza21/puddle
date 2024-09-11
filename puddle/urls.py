@@ -9,4 +9,4 @@ urlpatterns = [
     path('dashboard/', include('dashboard.urls')),
     path('inbox/', include('conversation.urls')),
     path('admin/', admin.site.urls),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
