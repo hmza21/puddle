@@ -11,6 +11,8 @@
 5. pillow (10.4.0)
 6. Tailwind CSS
 
+> NOTE: This list does NOT include dependencies for hosting.
+
 ## Learning outcomes
 
 1. Python OOP
