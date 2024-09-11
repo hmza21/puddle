@@ -7,7 +7,8 @@ load_dotenv()
 BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv('DJANGO_SECRET')
 DEBUG = False
-ALLOWED_HOSTS = ['localhost', 'https://an7-resolute-tesla.circumeo-apps.net/']
+# ALLOWED_HOSTS = ['localhost']
+ALLOWED_HOSTS = ['http://puddle.work.gd/']
 
 LOGIN_URL = '/login/'
 LOGIN_REDIRECT_URL = '/'
@@ -61,22 +62,11 @@ WSGI_APPLICATION = 'puddle.wsgi.application'
 # Database
 
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.postgresql",
-        "NAME": os.environ["POSTGRES_DB"],
-        "USER": os.environ["POSTGRES_USER"],
-        "PASSWORD": os.environ["POSTGRES_PASSWORD"],
-        "HOST": os.environ["POSTGRES_HOST"],
-        "PORT": os.environ["POSTGRES_PORT"],
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
 
 # Password validation
 
