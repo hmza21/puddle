@@ -1,0 +1,31 @@
+{% extends 'core/base.html' %}
+
+{% block title %}
+  Inbox
+{% endblock %}
+
+{% block content %}
+  <h1 class="mb-6 text-3xl">Inbox</h1>
+
+  <div class="space-y-6">
+    {% for convo in conversations %}
+      <a href="{% url 'conversation:detail' convo.id %}">
+        <div class="p-6 flex bg-gray-100 rounded-xl">
+          <div class="pr-6">
+            <img src="{{ convo.item.image.url }}" class="w-20 rounded-xl" />
+          </div>
+          <div>
+            {% for member in convo.members.all %}
+              {% if member != request.user %}
+                <p class="mb-4">
+                  <strong>{{ member.username }}</strong>&nbsp;|&nbsp;{{ convo.modified_at }}
+                </p>
+                <p>{{ convo.item.name }}</p>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      </a>
+    {% endfor %}
+  </div>
+{% endblock %}
